@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model </title>
+    <!-- css style sheet link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <head>
+        <h2>This page is Document object Model instruction</h2>
+    </head>
+    <main id="main-content">
+        <ul id="selectorAll">
+            <li id="home">Home</li>
+            <li>About</li>
+            <li class="service">Service</li>
+            <li>ContactUs</li>
+        </ul>
+    </main>
+    <section class="append-list">
+        <div class="header">
+          <div class="content-area">
+            <h1>What is DOM?</h1>
+            <p>DOM means Document Object Model</p>
+            <button>Submit</button>
+          </div>
+        </div>
+    </section>
+    <section class="append-list">
+        <div class="header">
+          <div id="selector" class="content-area">
+            <h1>What is DOM?</h1>
+            <p class="">DOM means Document Object Model</p>
+            <button>Submit</button>
+          </div>
+        </div>
+    </section>
+    <section class="append-list">
+        <div class="header">
+          <div class="content-area">
+            <h1>What is DOM?</h1>
+            <p>DOM means Document Object Model</p>
+            <button>Submit</button>
+          </div>
+        </div>
+    </section>
+
+    <script>
+        const listName = document.getElementsByTagName('li');
+        // console.log(listName);
+        for(const list of listName){
+            console.log(list.innerText);
+        }
+
+        const tagName = document.getElementsByTagName('h2');
+        // console.log(tagName);
+        for(const tag of tagName){
+            console.log(tag.innerText)
+        }
+
+        const services =document.getElementsByClassName('service');
+        for(const service of services){
+            console.log(service.innerText);
+        }
+        const homes = document.getElementById('home');
+        // console.log(homeType.innerText)
+        homes.innerText= 'This is not number';
+        // console.log(homes);
+        // for(const home of homes){
+        //     console.log(home);
+        // }
+    </script>
+    <script src="./js/append.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
